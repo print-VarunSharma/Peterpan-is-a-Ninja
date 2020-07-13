@@ -18,7 +18,7 @@ DEBUG = True
 
 # 5a0ee679534801eb77165788e98b9ef90a440b289d585e95
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ninjasiteapp.herokuapp.com']
 
 
 # Application definition
