@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Background video -->
+
+<section>
+    <div class="video-background-holder">
+      <div class="video-background-overlay"></div>
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="{% static 'img\panvideo.mp4' %}" type="video/mp4" width="1000px">
+        </video>
+      <div class="video-background-content container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <h1 class="display-4">The Gallery</h1>
+            <p class="lead mb-0">“Creativity is the way I share my soul with the world.” - Brene Brown</p>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- End of BG Video -->
+
+<!-- Page Content -->
+ <section>
+  <section class="gallery-block cards-gallery">
+     <div class="container">
+         <div class="heading">
+             <h2>The Gallery</h2>
+         </div>
+         <div class="row">
+             <div class="col-md-6 col-lg-4">
+                 <div class="card border-0 transform-on-hover">
+                     <a class="lightbox" href="{% static 'img\fullnoirgirl.jpg' %}" class="img-fluid" style="justify-content: center;"><img src="{% static 'img\fullnoirgirl.jpg' %}" class="card-img-top"></a>
+                     <div class="card-body">
+                         <h6>Noir Girl</h6>
+                         <p class="text-muted card-text">Noir Collection</p>
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="card border-0 transform-on-hover">
+                     <a class="lightbox" href="{% static 'img\grey girl front.jpg' %}"><img src="{% static 'img\grey girl front.jpg' %}" class="card-img-top"></a>
+                     <div class="card-body">
+                         <h6>Front - Noir Girl</h6>
+                         <p class="text-muted card-text">Noir Collection</p>
+                     </div>
+                 </div>
+             </div>
+ 
+             <div class="col-md-6 col-lg-4">
+                 <div class="card border-0 transform-on-hover">
+                     <a class="lightbox" href="{% static 'img\greygirlback.jpg' %}"><img src="{% static 'img\greygirlback.jpg' %}" class="card-img-top"></a>
+                     <div class="card-body">
+                         <h6>Back - Noir Girl </h6>
+                         <p class="text-muted card-text">"What hurts your, blesses you. Darkness is your candle." -Rumi</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         
+         
+         <div class="row">
+             <div class="col-md-6 col-lg-4">
+                 <div class="card border-0 transform-on-hover">
+                     <a class="lightbox" href="{% static 'img\muhamed.jpeg' %}"><img src="{% static 'img\muhamed.jpeg' %}" class="card-img-top"></a>
+                     <div class="card-body">
+                         <h6>Muhamed Ali</h6>
+                         <p class="text-muted card-text">Raw Champion.</p>
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="card border-0 transform-on-hover">
+                     <a class="lightbox" href="{% static 'img\reflectiongirl.jpg' %}"><img src= "{% static 'img\reflectiongirl.jpg' %}" class="card-img-top"></a>
+                     <div class="card-body">
+                         <h6>Reflection</h6>
+                         <p class="text-muted card-text">"The beauty you see in me is a reflection of you."
+                            - Vanna Bonta</p>
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="card border-0 transform-on-hover">
+                     <a class="lightbox" href="{% static 'img\kobe.jpg' %}"><img src="{% static 'img\kobe.jpg' %}" class="card-img-top"></a>
+                     <div class="card-body">
+                         <h6>Kobe</h6>
+                         <p class="text-muted card-text">Live as if it's your last</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="container">
+        <div class="heading">
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href="{% static 'img\littlechild.jpg' %}"><img src="{% static 'img\littlechild.jpg' %}" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>Little Girl</h6>
+                        <p class="text-muted card-text">Lina.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href="{% static 'img\monkey.jpeg' %}"><img src="{% static 'img\monkey.jpeg' %}" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>Digital Monkey</h6>
+                        <p class="text-muted card-text">I think therefore I am.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href="{% static 'img\dog.jpeg' %}"><img src="{% static 'img\dog.jpeg' %}" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>Golden Lab</h6>
+                        <p class="text-muted card-text">Golden Heart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href="{% static 'img\elephant.jpeg' %}"><img src="{% static 'img\elephant.jpeg' %}" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>I see you</h6>
+                        <p class="text-muted card-text">We are not so different</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href= "{% static 'img\crow.jpg' %}"><img src= "{% static 'img\crow.jpg' %}" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>From Above</h6>
+                        <p class="text-muted card-text">But Grounded</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href="{% static 'img\lion.jpg' %}"><img src="{% static 'img\lion.jpg' %}" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>King of the Lands</h6>
+                        <p class="text-muted card-text">King of one self</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="heading">
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href="{% static 'img\panlogo.jpg' %}"><img src="{% static 'img\panlogo.jpg' %}" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>Peterpan is a Ninja </h6>
+                        <p class="text-muted card-text">"Art is ruled uniquely by the imagination."
+                            -Benedetto Croce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href="{% static 'img\oldlady.jpeg' %}"><img src="{% static 'img\oldlady.jpeg' %}"class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>Unexpected Happiness</h6>
+                        <p class="text-muted card-text">“Sometimes your joy is the source of your smile, but sometimes your smile can be the source of your joy.”
+                            - Thich Nhat Hanh</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href="{% static 'img\suma-final-piece-1.jpeg' %}"><img src="{% static 'img\suma-final-piece-1.jpeg' %}" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h6>Suma</h6>
+                        <p class="text-muted card-text">A small dog with a big heart</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+  </section>
+{% endblock content %}

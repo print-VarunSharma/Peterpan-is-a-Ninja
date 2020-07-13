@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!-- Divider Section-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url({% static 'img\sumacoast.jpg' %})">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">My Journey around the world.</h3>
+          <p class="lead">West Coast, British Columbia</p>
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url({% static 'img\amster_canal.jpg' %})">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">From the rich historical landscape of Europe</h3>
+          <p class="lead">Amsterdam, Netherlands</p>
+        </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url({% static '\img\shambala.jpg' %})">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">to the crystal blue waters of Bali.</h3>
+          <p class="lead">Bali, Indonesia</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+  <body>
+  <style>
+    body {
+      background-image: url("{% static 'img\cam-dicecca-QyfRofj7ePg-unsplash.jpg' %}"); no-repeat; background-size: cover; fixed;
+    }
+  </style>
+
+<section>
+  <iframe width="100%" height="800px" src="https://maphub.net/embed/100695?geolocation=1&legend=1&panel=1&panel_closed=1" frameborder="0" allow="geolocation" allow="autoplay" class="card border-0 shadow my-5"; border-radius: 50px></iframe>   
+</section>
+</body>
+
+{% endblock content %}

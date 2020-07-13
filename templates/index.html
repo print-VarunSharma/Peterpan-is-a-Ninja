@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Background video -->
+
+    <section>
+      <div class="video-background-holder">
+        <div class="video-background-overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+              <source src="{% static 'img\paint_video.mp4' %}" type="video/mp4" width="1000px">
+          </video>
+        <div class="video-background-content container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+              <h1 class="display-4">Welcome to Peterpan is a Ninja</h1>
+              <p class="lead mb-0">“If you love life, don’t waste time, for time is what life is made up of.” – Bruce Lee</p>
+                <a href="#footer" class="hero-link">View More</a>
+                
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- End of BG Video -->
+  
+
+    <!-- Intro Section-->
+    <section id="#intro" class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="h3">Artistry, Travel, & Expression</h2>
+            <p class="text-big"> Welcome to Peterpan is a Ninja.<strong> I am an artist, traveller, and blogger.</strong> On this site you can<strong> explore</strong> my collection of art work, the places I've travelled, and you can interact with my posts. Live life to the fullest and enjoy Peterpan is a Ninja!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="featured-posts no-padding-top">
+      <div class="container">
+        <!-- Post-->
+        
+        {% for obj in object_list %}
+        <div class="row d-flex align-items-stretch">
+          {% if not forloop.first and not forloop.last %}
+          <div class="image col-lg-5"><img src="{{ obj.thumbnail.url }}" alt="..."></div>
+          {% endif %}
+          <div class="text col-lg-7">
+            <div class="text-inner d-flex align-items-center">
+              <div class="content">
+                <header class="post-header">
+                  <div class="category">
+                    {% for cat in obj.categories.all %}
+                    <a href="#">{{ cat }}</a>
+                    {% endfor %}
+                  </div>
+                  <a href="post.html">
+                    <h2 class="h4">{{ obj.title }}</h2>
+                    </a>
+                </header>
+                <p>{{ obj.overview|linebreaks|truncatechars:200 }}</p>
+                <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                    <div class="avatar"><img src="{{ obj.author.profile_picture.url }}" alt="..." class="img-fluid"></div>
+                    <div class="title"><span>{{ obj.author }}</span></div></a>
+                  <div class="date"><i class="icon-clock"></i> {{ obj.timestamp|timesince }} ago</div>
+                  <div class="comments"><i class="icon-comment"></i>{{ obj.comment_count }}</div>
+                </footer>
+              </div>
+            </div>
+          </div>
+          {% if forloop.first or forloop.last %}
+          <div class="image col-lg-5"><img src="{{ obj.thumbnail.url }}" alt="..."></div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Divider Section-->
+    <section style="background: url({% static 'img\khara-woods-KR84RpMCb0w-unsplash.jpg' %}); background-size: cover; background-position: center bottom" class="divider">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h2 style="color:black">"When I write, I feel like an armless, legless man with a crayon in his mouth.” - Kurt Vonnegut</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Latest Posts -->
+    <section class="latest-posts"> 
+      <div class="container">
+        <header> 
+          <h2>Latest Posts</h2>
+          <p class="text-big">Art, Blogs, Thoughts</p>
+        </header>
+        <div class="row">
+          {% for obj in latest %}
+          <div class="post col-md-4">
+            <div class="post-thumbnail"><a href="#"><img src="{{ obj.thumbnail.url }}" alt="..." class="img-fluid"></a></div>
+            <div class="post-details">
+              <div class="post-meta d-flex justify-content-between">
+                <div class="date">{{ obj.timestamp }}</div>
+                <div class="category">
+                  {% for cat in obj.categories.all %}
+                  <a href="#">{{ cat }}</a>
+                  {% endfor %}
+                  </div>
+              </div><a href="#">
+                <h3 class="h4">{{ obj.title }}</h3></a>
+              <p class="text-muted">{{ obj.overview|linebreaks|truncatechars:200 }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+{% endblock content %}

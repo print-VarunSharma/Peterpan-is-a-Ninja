@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="parallax-world-of-ugg">
+  
+    <section>
+      <div class="title">
+        <h3>Inquire</h3>
+        <h1>Peterpan is a Ninja</h1>
+      </div>
+    </section>
+    
+    <section>
+        <div class="parallax-one" style="background-image: url({% static 'img\greygirlback.jpg' %})">
+          <h2>Do you like what you see?</h2>
+        </div>
+    </section>
+     
+    <section>
+      <div class="parallax-two" style="background-image: url({% static 'img\lion.jpg' %})">
+        <h2>Do you want a currated art piece?</h2>
+      </div>
+    </section>
+
+    <section>
+      <div class="parallax-three" style="background-image: url({% static 'img\crow.jpg' %})">
+        <h2>I am an email or phone call away.</h2>
+      </div>
+    </section>
+
+    <section>
+        <div class="parallax-four" style="background-image: url({% static 'img\noirgilroncanvas.jpg' %})">
+          <h2>Contact Info Below. <br></h2>
+        </div>
+    </section>
+    
+
+    </div>
+
+{% endblock content %}
