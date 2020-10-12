@@ -1,8 +1,11 @@
 env
+coldplayenv
+virtualenvinfo.txt
+.env
+
 **/*.pyc
 **/__pycache__
 media
-static
 en
 # Byte-compiled / optimized / DLL files
 
@@ -126,14 +129,6 @@ db.sqlite3-journal
 
 
 
-# Flask stuff:
-
-instance/
-
-.webassets-cache
-
-
-
 # Scrapy stuff:
 
 .scrapy
@@ -151,13 +146,6 @@ docs/_build/
 .pybuilder/
 
 target/
-
-
-
-# Jupyter Notebook
-
-.ipynb_checkpoints
-
 
 
 # IPython
